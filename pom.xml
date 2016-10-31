@@ -78,6 +78,12 @@
             <version>${springversion}</version>
         </dependency>
         <!--spring web依赖 jar end-->
+        <!--spring test jar-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springversion}</version>
+        </dependency>
         <!--spring jar 包 end-->
         <!--mybatis 相关包-->
         <dependency>
@@ -99,6 +105,29 @@
             <version>${mysqlconnector}</version>
         </dependency>
         <!--数据库连接包 end-->
+        <!--redis集成-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.7.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <!--序列化工具-->
+        <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+        <!--序列化工具 end-->
     </dependencies>
     <build>
         <finalName>netshop</finalName>
