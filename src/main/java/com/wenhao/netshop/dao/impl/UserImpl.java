@@ -27,13 +27,20 @@ public class UserImpl extends AbstractBaseRedisDao implements IUserDao {
                 Schema<User> schema = RuntimeSchema.createFrom(User.class);
                 byte[] bytes = ProtostuffIOUtil.toByteArray(user, schema, LinkedBuffer.allocate(LinkedBuffer.DEFAULT_BUFFER_SIZE));
                 connection.set(key.getBytes(), bytes);
+
                 return true;
             }
         });
         return re;
     }
 
-    public Boolean add(List<User> users) {
+    public Boolean add(final List<User> users) {
+        redisTemplate.execute(new RedisCallback() {
+            public Object doInRedis(RedisConnection connection) throws DataAccessException {
+                
+                return true;
+            }
+        });
         return null;
     }
 
@@ -64,6 +71,12 @@ public class UserImpl extends AbstractBaseRedisDao implements IUserDao {
     }
 
     public List<User> getAll() {
+        redisTemplate.execute(new RedisCallback() {
+            public Object doInRedis(RedisConnection connection) throws DataAccessException {
+
+                return null;
+            }
+        });
         return null;
     }
 }

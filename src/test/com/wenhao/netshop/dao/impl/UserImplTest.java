@@ -10,6 +10,9 @@ import org.springframework.test.annotation.SystemProfileValueSource;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -26,13 +29,19 @@ public class UserImplTest {
     @Test
     public void add() throws Exception {
         User user = new User();
-        user.setId(1L);
-        user.setName("wenhao");
-        user.setPassword("1111");
-        Boolean result = dao.add(user);
-        System.out.println(result);
-        user = dao.get(1L);
-        System.out.println(user);
+        List<User> list = new ArrayList<User>();
+        long i;
+        for (i = 0; i < 10; i++) {
+            i++;
+            user.setId(i);
+            user.setName("wenhao");
+            user.setPassword("1111");
+            list.add(user);
+        }
+        Boolean result = dao.add(list);
+//        System.out.println(result);
+//        user = dao.get(1L);
+//        System.out.println(user);
     }
 
 }
