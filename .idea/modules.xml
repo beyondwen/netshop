@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/netshop.iml" filepath="$PROJECT_DIR$/netshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netshopon.iml" filepath="$PROJECT_DIR$/netshopon.iml" />
     </modules>
   </component>
 </project>

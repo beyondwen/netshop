@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="netshop" />
+        <module name="netshopon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="netshop" target="1.5" />
+      <module name="netshopon" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

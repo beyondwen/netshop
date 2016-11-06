@@ -65,6 +65,11 @@
             <artifactId>spring-tx</artifactId>
             <version>${springversion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${springversion}</version>
+        </dependency>
         <!--spring 事务 jar end-->
         <!--spring web依赖 jar-->
         <dependency>
@@ -99,6 +104,13 @@
             <version>${mysqlconnector}</version>
         </dependency>
         <!--数据库连接包 end-->
+        <!--数据库连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.26</version>
+        </dependency>
+        <!--数据库连接池end-->
     </dependencies>
     <build>
         <finalName>netshop</finalName>
